@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportDesk | Customer Support Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>Support<span>Desk.</span></h2>
+    <div>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="/dashboard.html" id="dashboardLink" style="display:none">Dashboard</a>
+        <a href="#login" class="nav-btn" id="loginLink">Get Started</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="tag">SMART CUSTOMER SUPPORT PLATFORM</span>
+        <h1>Support Made<br><span>Simple & Faster.</span></h1>
+        <p>Manage customer complaints, track support tickets and connect with your support team — all in one place.</p>
+        <a href="#login" class="primary-btn" id="heroButton">Get Started →</a>
+        <a href="#features" class="secondary-btn">Explore Features</a>
+    </div>
+
+    <div class="hero-card">
+        <div class="card-top">
+            <strong>Support Overview</strong>
+            <span>● Live Dashboard</span>
+        </div>
+        <div class="mini-stat">
+            <div><small>Total Tickets</small><h2>1,248</h2></div>
+            <div><small>Resolved</small><h2>986</h2></div>
+        </div>
+        <div class="ticket-row">🟡 Payment Issue <span>In Progress</span></div>
+        <div class="ticket-row">🟢 Login Problem <span>Resolved</span></div>
+        <div class="ticket-row">🔵 Account Support <span>Open</span></div>
+        <p class="demo-note">Illustrative dashboard preview</p>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <h2>Everything You Need for Better Support</h2>
+    <p>One platform. Complete customer support management.</p>
+
+    <div class="feature-grid">
+        <article><div>🎫</div><h3>Ticket Management</h3><p>Create and manage customer complaints easily.</p></article>
+        <article><div>⚡</div><h3>Fast Resolution</h3><p>Assign tickets and resolve customer issues faster.</p></article>
+        <article><div>📊</div><h3>Live Dashboard</h3><p>Monitor ticket progress and support performance.</p></article>
+        <article><div>🔒</div><h3>Secure Access</h3><p>Separate customer, agent and admin permissions.</p></article>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>Customer Support, Organized.</h2>
+    <p>SupportDesk helps businesses organize customer requests, improve communication and track every issue until resolution.</p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Need Help?</h2>
+    <p>Create a support ticket and let our team assist you.</p>
+    <a href="#login" class="primary-btn">Contact Support →</a>
+</section>
+
+<footer>
+    <h3>SupportDesk.</h3>
+    <p>Customer Support & Ticket Management System</p>
+    <p>© 2026 SupportDesk. All rights reserved.</p>
+</footer>
+
+<section id="login" class="login-area">
+    <div class="login-box">
+        <h2>Welcome to SupportDesk</h2>
+        <p>Login or create your account to continue.</p>
+
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email Address" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <form id="registerForm" style="display:none">
+            <input type="text" id="registerName" placeholder="Full Name" required>
+            <input type="email" id="registerEmail" placeholder="Email Address" required>
+            <input type="password" id="registerPassword" placeholder="Create Password (minimum 8 characters)" minlength="8" required>
+            <button type="submit">Create Account</button>
+        </form>
+
+        <form id="verifyForm" style="display:none">
+            <input type="email" id="verifyEmail" placeholder="Email Address" required>
+            <input type="text" id="otp" placeholder="Enter 6-digit OTP" maxlength="6" required>
+            <button type="submit">Verify Email</button>
+        </form>
+
+        <form id="forgotForm" style="display:none">
+            <input type="email" id="forgotEmail" placeholder="Registered Email" required>
+            <button type="submit">Send Reset OTP</button>
+        </form>
+
+        <form id="resetForm" style="display:none">
+            <input type="email" id="resetEmail" placeholder="Email Address" required>
+            <input type="text" id="resetOTP" placeholder="Reset OTP" maxlength="6" required>
+            <input type="password" id="newPassword" placeholder="New Password" minlength="8" required>
+            <button type="submit">Reset Password</button>
+        </form>
+
+        <p id="authMessage"></p>
+        <p id="authTitle">Welcome Back</p>
+        <p id="switchText">Don't have an account? <a href="#" id="showRegister">Sign Up</a><br><br><a href="#" id="showForgot">Forgot Password?</a></p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+<script>
+if (localStorage.getItem('token')) {
+    document.getElementById('loginLink').style.display = 'none';
+    document.getElementById('dashboardLink').style.display = 'inline-block';
+}
+</script>
+</body>
+</html>
+
